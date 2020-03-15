@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "mystyle.css" />
+   <style>  form{text-align:left} form.searchform{text-align:right} p.register{font-size:32px}   </style>
+</head> 
+<body>
+<a href="index.html"> HOMEPAGE </a>| 
+	                 <a href="blog.html"> BLOG </a> |
+	             <a href="services.html"> OUR SERVİCES </a> |
+	         <a href="team.html">OUR TEAM</font> </a> |
+	     <a href="gallery.html"> GALLERY </a> |
+	 <a href="contactme.html"> CONTACT ME</a> |
+<p class=register>	 <a href="register.html"> REGİSTER </a> |</p>
+<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+<input name="sitesearch" type="hidden" >
+<input autocomplete="off" class="form-control search" name="q" placeholder="Search in google" required="required"  type="text">
+<button class="button" type="submit">Search</button></form>
+<fieldset>
+
+<form action="thanks.html">
+  <label for="fname">Name Surname:</label>
+  <input type="text" id="fname" name="fname"required ><br>
+  <label for="thePassword"> Password: </label>
+                        <input type="password" placeholder="min 4 lenght"  name="userpassword" required minlength="4"> <br>
+  <label for="mail">Mail:</label>
+ <input type="email" id="mail "name="mail"required><br>
+ <label for="theDate">Date of Birth:</label>
+                        <input type="date" id="theDate" placeholder="Please enter a date after 1910 year."name="date" min="1910-01-01" max="2020-03-01"required><br>
+  <label for="theNumber">PhoneNumber:</label>
+                        <input type="number" placeholder="Max lenght is 11"    id="theNumber" maxlength="11"  required  ><br>
+<label for="message">About Me:</label><br>
+  <textarea name="message"   style="width:150px; height:150px;"> </textarea><br>
+  <label for="files">Upload your photo:</label>
+  
+  <input type="file" id="files" name="files" required><br><label for="gender"><strong>Gender</strong></label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <label for="cars">Choose your Department:</label>
+  <select id="department" name="department">
+    <option value="IE">Industrial Engineering</option>
+    <option value="Ceng">Computer Engineering</option>
+    <option value="chem">Chemical Engineering</option>
+    <option value="cvl">Civil Engineering</option>
+	<option value="other">Other</option>
+  </select><br>
+  <label for="Mark your interest"><strong>Mark Your İnterest </strong></label><br>
+   <input type="checkbox" id="1" name="1" value="Music">
+  <label for="1"> Music</label>
+  <input type="checkbox" id="2" name="2" value="Politics">
+  <label for="2"> Politics</label><br>
+  <input type="checkbox" id="3" name="3" value="Science and Techonolgy">
+  <label for="3"> Science and Techonolgy</label>
+  <input type="checkbox" id="4" name="4" value="Tennis">
+  <label for="4"> Tennis</label><br>
+  <input type="checkbox" id="5" name="5" value="Books">
+  <label for="5"> Books</label>
+  <input type="checkbox" id="6" name="6" value="History">
+  <label for="6"> History</label><br>
+   <input type="checkbox" id="7" name="7" value="Gaming">
+  <label for="7"> Gaming</label>
+  <input type="checkbox" id="8" name="8" value="Tv Series">
+  <label for="8"> Tv Series</label><br>
+  <input type="checkbox" id="9" name="9" value="Basketball">
+  <label for="9"> Basketball</label>
+  <input type="checkbox" id="10" name="10" value="Fishing">
+  <label for="10"> Fishing</label>
+  <br><br>
+  
+</fieldset>
+<input type="submit" value="Send"> 
+  <input type="reset"></form>
+<footer>
+  <p>Website created by: Utku Narin</p>
+  <p>All copyrights are hidden.</p>
+</footer>
+</body>
+</html>
