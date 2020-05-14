@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel = "stylesheet"
-   type = "text/css"
-   href = "mystyle.css" />
-   <style>  form{text-align:left} form.searchform{text-align:right} p.register{font-size:32px}   </style>
-</head> 
+ <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    
+    .row.content {height: 580px}
+    
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+   
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+  
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
 <body>
-<a href="index.html"> HOMEPAGE </a>| 
-	                 <a href="blog.html"> BLOG </a> |
-	             <a href="services.html"> OUR SERVİCES </a> |
-	         <a href="team.html">OUR TEAM</font> </a> |
-	     <a href="gallery.html"> GALLERY </a> |
-	 <a href="contactme.html"> CONTACT ME</a> |
-<p class=register>	 <a href="register.html"> REGİSTER </a> |</p>
-<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
-<input name="sitesearch" type="hidden" >
-<input autocomplete="off" class="form-control search" name="q" placeholder="Search in google" required="required"  type="text">
-<button class="button" type="submit">Search</button></form>
-<fieldset>
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">HOMEPAGE</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="services.html">OUR SERVİCES</a></li>
+	 <li><a href="team.html">OUR TEAM</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="contactme.html">CONTACT ME</a></li>
+	<li><a href="register.html"><font size=32px>REGİSTER</font></a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+            <h2><p>Register to join us</h2></p>
+ <img class="join" src="army.jpg" alt="pets" width="236" height="480">		
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <p class="head"><fieldset>
+<h2><p>REGİSTER FORM</h2></p>
 <form action="thanks.html">
   <label for="fname">Name Surname:</label>
   <input type="text" id="fname" name="fname"required ><br>
@@ -33,12 +82,12 @@
   <label for="theNumber">PhoneNumber:</label>
                         <input type="number" placeholder="Max lenght is 11"    id="theNumber" maxlength="11"  required  ><br>
 <label for="message">About Me:</label><br>
-  <textarea name="message"   style="width:150px; height:150px;"> </textarea><br>
+  <textarea name="message"   style="width:150px; height:120px;"> </textarea><br>
   <label for="files">Upload your photo:</label>
   
-  <input type="file" id="files" name="files" required><br><label for="gender"><strong>Gender</strong></label><br>
+  <input type="file" id="files" name="files" required><br><label for="gender"><strong>Gender: </strong></label>
   <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
+  <label for="male">Male</label>
   <input type="radio" id="female" name="gender" value="female">
   <label for="female">Female</label><br>
   <label for="cars">Choose your Department:</label>
@@ -53,30 +102,44 @@
    <input type="checkbox" id="1" name="1" value="Music">
   <label for="1"> Music</label>
   <input type="checkbox" id="2" name="2" value="Politics">
-  <label for="2"> Politics</label><br>
+  <label for="2"> Politics</label>
   <input type="checkbox" id="3" name="3" value="Science and Techonolgy">
   <label for="3"> Science and Techonolgy</label>
   <input type="checkbox" id="4" name="4" value="Tennis">
-  <label for="4"> Tennis</label><br>
+  <label for="4"> Tennis</label>
   <input type="checkbox" id="5" name="5" value="Books">
-  <label for="5"> Books</label>
+  <label for="5"> Books</label><br>
   <input type="checkbox" id="6" name="6" value="History">
-  <label for="6"> History</label><br>
+  <label for="6"> History</label>
    <input type="checkbox" id="7" name="7" value="Gaming">
   <label for="7"> Gaming</label>
   <input type="checkbox" id="8" name="8" value="Tv Series">
-  <label for="8"> Tv Series</label><br>
+  <label for="8"> Tv Series</label>
   <input type="checkbox" id="9" name="9" value="Basketball">
   <label for="9"> Basketball</label>
   <input type="checkbox" id="10" name="10" value="Fishing">
   <label for="10"> Fishing</label>
   <br><br>
-  
-</fieldset>
-<input type="submit" value="Send"> 
+  <input type="submit" value="Send"> 
   <input type="reset"></form>
-<footer>
-  <p>Website created by: Utku Narin</p>
+</fieldset>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+<input name="sitesearch" type="hidden" >
+<input autocomplete="off" class="form-control search" name="q" placeholder="Search in google" required="required"  type="text">
+<button class="button" type="submit">Search</button></form>
+      </div>
+      <div class="well">
+       <p>If you want to contact me,Please <a href="contactme.html" target="_blank">click contact me</a></p> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+ <p>Website created by: Utku Narin</p>
   <p>All copyrights are hidden.</p>
 </footer>
 </body>

@@ -2,31 +2,97 @@
 <html>
 <head>
 	<title></title>
-	<link rel = "stylesheet"
-   type = "text/css"
-   href = "mystyle.css" />
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    
+    .row.content {height: 580px
+	}
+    
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+   
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+  
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
 </head> 
 <body>
-<a href="index.html"> HOMEPAGE </a>| 
-	                 <a href="blog.html"> BLOG </a> |
-	             <a href="services.html"> OUR SERVİCES </a> |
-	         <a href="team.html"><font size=32px>OUR TEAM</font> </a> |
-	     <a href="gallery.html"> GALLERY </a> |
-	 <a href="contactme.html"> CONTACT ME</a> |
-	<a href="register.html"> REGİSTER </a> |
-<form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">HOMEPAGE</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="services.html">OUR SERVİCES</a></li>
+	 <li><a href="team.html"><font size=32px>OUR TEAM</font></a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="contactme.html">CONTACT ME</a></li>
+	<li><a href="register.html">REGİSTER</a></li>
+      
+     </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+	  <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-md-2 sidenav">
+            <p>Name:Utku Narin <br>Age:22<br>University:Estü Veterinary Faculty<br>Hobbies:Reading books,watching basketball,swimming<br><a href = "mailto:dsdsds@eskisehir.edu.tr">
+       To write mail</a><img src="dr1.png" width="150" height="150"></p>
+     </div>
+    <div class="col-sm-8 text-left"> 
+       <ul class="123"> <li> Name:Thomas Müller <br>Age:28<br>University:Munchen Veterinary Faculty<br>Hobbies:Fishing,playing football ,playing video games<br><a href = "mailto:666454@eskisehir.edu.tr">
+       To write mail</a><br><img src="dr2.jpg" width="150" height="150"></li><hr>
+    <li>   Name:Barbara Palvin <br>Age:24<br>University:Budapest Veterinary Faculty<br>Hobbies:Travelling,watching basketball,visiting art gallery<br><a href = "barbara@eskisehir.edu.tr">
+       To write mail</a><br><img src="dr3.jpg" width="150" height="150"></p></li>
+   </ul> 
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
 <input name="sitesearch" type="hidden" >
 <input autocomplete="off" class="form-control search" name="q" placeholder="Search in google" required="required"  type="text">
 <button class="button" type="submit">Search</button></form>
-<p>Name:Utku Narin <br>Age:22<br>University:Estü Veterinary Faculty<br>Hobbies:Reading books,watching basketball,swimming<br><a href = "mailto:utkunarin@eskisehir.edu.tr">
-       To write mail</a><img src="dr1.png" width="150" height="150">
-       </p>
-<p>Name:Thomas Müller <br>Age:28<br>University:Munchen Veterinary Faculty<br>Hobbies:Fishing,playing football ,playing video games<br><a href = "mailto:666454@eskisehir.edu.tr">
-       To write mail</a><img src="dr2.jpg" width="150" height="150"></p>
-       <p>Name:Barbara Palvin <br>Age:24<br>University:Budapest Veterinary Faculty<br>Hobbies:Travelling,watching basketball,visiting art gallery<br><a href = "barbara@eskisehir.edu.tr">
-       To write mail</a><img src="dr3.jpg" width="150" height="150"></p>
-	   <footer>
-  <p>Website created by: Utku Narin</p>
+      </div>
+      <div class="well">
+       <p>If you want to contact me,Please <a href="contactme.html" target="_blank">click contact me</a></p> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+ <p>Website created by: Utku Narin</p>
   <p>All copyrights are hidden.</p>
 </footer>
 </body>

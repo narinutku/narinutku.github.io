@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>	<link rel = "stylesheet"
-   type = "text/css"
-   href = "mystyle.css" />
-   <style> form{ text-align:left} form.searchform{text-align:right}</style>
+<title></title>	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    
+    .row.content {height: 580px}
+    
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+   
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+  
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
 </head>
 <body>
-<a href="index.html"> HOMEPAGE </a>| 
-	                 <a href="blog.html"> BLOG </a> |
-	             <a href="services.html"> OUR SERVİCES </a> |
-	         <a href="team.html"> OUR TEAM </a> |
-	     <a href="gallery.html"> GALLERY </a> |
-	 <a href="contactme.html"> <font size=32px>CONTACT ME</font></a> |
-	<a href="register.html"> REGİSTER </a> |
-</form> <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
-<input name="sitesearch" type="hidden" >
-<input autocomplete="off" class="form-control search" name="q" placeholder="Search in google" required="required"  type="text">
-<button class="button" type="submit">Search</button></form>
-<form action="response.html">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">HOMEPAGE</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="services.html">OUR SERVİCES</a></li>
+	 <li><a href="team.html">OUR TEAM</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
+    <li><a href="contactme.html"><font size=32px>CONTACT ME</font></a></li>
+	<li><a href="register.html">REGİSTER</a></li>
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+ <form action="response.html">
   <label for="fname">Name Surname:</label><br>
   <input type="text" id="fname" name="fname"required ><br>
   <label for="mail">Mail:</label><br>
@@ -26,14 +74,31 @@
   <label for="theNumber">PhoneNumber:</label><br>
                         <input type="number" placeholder="Max lenght is 11"    id="theNumber" maxlength="11"  required  ><br><label for="issue">Issue:</label><br>
   <input type="text" id="issue" name="issue"required ><br><label for="message">Message:</label><br>
-  <textarea name="message"   style="width:200px; height:300px;"> </textarea><br>
+  <textarea name="message"   style="width:200px; height:170px;"> </textarea><br>
 
 
-<input type="submit" value="Send">
+<input type="submit" value="Send"></form>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1><p class="head"><strong>  You can contact us with       </strong></p></h1>
+     <h2> <a href="mailto:utkunarin@eskisehir.edu.tr">E mail</a><br> <a href="https://www.twitter.com"> Twitter</a><br><a href="https://www.facebook.com"> Facebook</a></h2>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+<input name="sitesearch" type="hidden" >
+<input autocomplete="off" class="form-control search" name="q" placeholder="Search in google" required="required"  type="text">
+<button class="button" type="submit">Search</button></form>
+      </div>
+      <div class="well">
+       <p>If you want to contact me,Please <a href="contactme.html" target="_blank">click contact me</a></p> 
+      </div>
+    </div>
+  </div>
+</div>
 
-<p> You can contact me with </p> <a href="mailto:utkunarin@eskisehir.edu.tr">E mail</a><br> <a href="https://www.twitter.com"> Twitter</a><br><a href="https://www.facebook.com"> Facebook</a>
-<footer>
-  <p>Website created by: Utku Narin</p>
+<footer class="container-fluid text-center">
+ <p>Website created by: Utku Narin</p>
   <p>All copyrights are hidden.</p>
 </footer>
 
