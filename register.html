@@ -151,7 +151,7 @@ else if(((password==null||password==""))||(!password.match(pswformat))){
 return false;  
   }
 else if((dateString==null||dateString==""||birthyear>current_year||birthyear<1920)||(birthyear=current_year&&birthmonth>current_month)){
-alert("Birth years should be between 1920 and today(in this month)") //birthyear=current_year&&birthmonth>current_year.getMonth()))
+alert("Birth year should be between 1920 and today(in this month)") //birthyear=current_year&&birthmonth>current_year.getMonth()))
 return false;
 } 
 else if(((phone==null||phone==""))||(!phone.match(phoneformat))){
