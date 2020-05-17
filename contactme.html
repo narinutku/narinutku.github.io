@@ -4,6 +4,7 @@
 <title></title>	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
@@ -38,9 +39,113 @@
       }
       .row.content {height:auto;} 
     }
+	body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #222;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.label {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn  {
+  background-color: #222;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.rst{
+  background-color: #222;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+div.col-sm-2{
+	 border: 4px #55625F;
+  border-radius: 12px;
+	height:580;
+	border-style:groove;
+	}
+	div.col-sm-8{
+	 border: 4px #55625F;
+  border-radius: 12px;
+	height:580;
+	border-style:groove;
+	padding-bottom:150px;
+	}
   </style>
 </head>
-<body>
+<body><script>
+function validateform(){  
+var name=document.myform.name.value;  
+var msj=document.myform.iss.value;
+
+  var letters = /^[A-Za-z]+$/;
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+
+  var phoneformat=/^\d{11}$/;
+  var mail=document.myform.email.value;
+ 
+  var phone=document.myform.phone.value;
+  
+
+if ((name==null || name=="")||(!name.match(letters))){  
+  alert("Name and surname fields should not be empty and contain only letters.");
+ 
+  return false;  
+}else if(((mail==null||mail==""))||(!mail.match(mailformat))){
+alert("You should write your e-mail with <id>@<domain> format");
+return false;}
+else if(((phone==null||phone==""))||(!phone.match(phoneformat))){
+alert("Telephone number field should not be empty and contain exactly 11 digits.");
+
+return false;}
+else if(msj==null||msj==""){
+alert("Please write issue");
+return false;}
+
+}  
+
+
+
+
+</script>
+
 <nav class="navbar navbar-expand-sm navbar-inverse ">
 
   <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,24 +177,43 @@
 
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
- <form action="response.html">
-  <label for="fname">Name Surname:</label><br>
-  <input type="text" id="fname" name="fname"required ><br>
-  <label for="mail">Mail:</label><br>
- <input type="email" id="mail "name="mail"required><br>
-  <label for="theNumber">PhoneNumber:</label><br>
-                        <input type="number" placeholder="Max lenght is 11"    id="theNumber" maxlength="11"  required  ><br><label for="issue">Issue:</label><br>
-  <input type="text" id="issue" name="issue"required ><br><label for="message">Message:</label><br>
-  <textarea name="message"   style="width:200px; height:170px;"> </textarea><br>
+    <div class="col-sm-2 sidenav">  <h2><p class="head"><strong>  You can contact us with       </strong></p></h2>
+      <a href="https://www.facebook.com">
+  <img src="fc.png" width="80" height="80"  alt="Click to go Facebook " ></a><br>
+  <a href="https://www.twitter.com"><br>
+  <img src="twt.png" width="80" height="80"  alt="Click to go Twitter " ></a><br>
+<a href="https://www.instagram.com"><br>
+  <img src="insta.png" width="80" height="80"  alt="Click to go Instagram " ></a><br>
+  <a href="mailto: narinclinic@gmail.com"><br>
+  <img src="gmail.jpg" width="80" height="80"  alt="Write mail to us " ></a>
+ </div>
 
 
-<input type="submit" value="Send"></form>
-    </div>
+
+   
     <div class="col-sm-8 text-left"> 
-      <h1><p class="head"><strong>  You can contact us with       </strong></p></h1>
-     <h2> <a href="mailto:utkunarin@eskisehir.edu.tr">E mail</a><br> <a href="https://www.twitter.com"> Twitter</a><br><a href="https://www.facebook.com"> Facebook</a></h2>
-    </div>
+    
+  <form action="response.html" name="myform" onsubmit="return validateform()" method="post"style="max-width:500px;margin:auto ">
+  <h2>Contact Us</h2>
+  <div class="input-container" >
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Name and Surname" name="name">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="email" placeholder="Email" name="email">
+  </div>
+  <div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="number" placeholder="PhoneNumber" name="phone"></div>
+  <div class="input-container" >
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Issue" name="iss">
+  </div><div class="input-container">
+    <i class="fa fa-comment-o icon"></i><label class="input-field"  type="text" style="width:90px; height:20px;"  >Message</label><textarea name="mesage" placeholder="About Me"  style="width:360px; height:60px;"> </textarea>
+   
+  </div><button type="submit" class="btn">Send</button></form>  </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
         <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">

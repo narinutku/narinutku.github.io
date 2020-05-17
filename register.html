@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
   <style>
     
     .navbar {
@@ -39,10 +41,125 @@
       }
       .row.content {height:auto;} 
     }
+	
+	
+	
+	body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #222;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.label {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn  {
+  background-color: #222;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.rst{
+  background-color: #ED3913;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+div.col-sm-7{
+	 border: 4px #55625F;
+  border-radius: 12px;
+	height:580;
+	border-style:groove;
+	}
+div.col-sm-3{
+	 border: 4px #55625F;
+  border-radius: 12px;
+	height:580;
+	border-style:groove;
+	}div.col-sm-2{
+	 border: 4px #55625F;
+  border-radius: 12px;
+	height:580;
+	border-style:groove;
+	}
   </style>
 </head>
 <body>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.psw.value; 
+var dateString = document.getElementById("brtdate").value; 
+  var letters = /^[a-zA-Z._-\s{1}\u00C6\u00D0\u018E\u018F\u0190\u0194\u0132\u014A\u0152\u1E9E\u00DE\u01F7\u021C\u00E6\u00F0\u01DD\u0259\u025B\u0263\u0133\u014B\u0153\u0138\u017F\u00DF\u00FE\u01BF\u021D\u0104\u0181\u00C7\u0110\u018A\u0118\u0126\u012E\u0198\u0141\u00D8\u01A0\u015E\u0218\u0162\u021A\u0166\u0172\u01AFY\u0328\u01B3\u0105\u0253\u00E7\u0111\u0257\u0119\u0127\u012F\u0199\u0142\u00F8\u01A1\u015F\u0219\u0163\u021B\u0167\u0173\u01B0y\u0328\u01B4\u00C1\u00C0\u00C2\u00C4\u01CD\u0102\u0100\u00C3\u00C5\u01FA\u0104\u00C6\u01FC\u01E2\u0181\u0106\u010A\u0108\u010C\u00C7\u010E\u1E0C\u0110\u018A\u00D0\u00C9\u00C8\u0116\u00CA\u00CB\u011A\u0114\u0112\u0118\u1EB8\u018E\u018F\u0190\u0120\u011C\u01E6\u011E\u0122\u0194\u00E1\u00E0\u00E2\u00E4\u01CE\u0103\u0101\u00E3\u00E5\u01FB\u0105\u00E6\u01FD\u01E3\u0253\u0107\u010B\u0109\u010D\u00E7\u010F\u1E0D\u0111\u0257\u00F0\u00E9\u00E8\u0117\u00EA\u00EB\u011B\u0115\u0113\u0119\u1EB9\u01DD\u0259\u025B\u0121\u011D\u01E7\u011F\u0123\u0263\u0124\u1E24\u0126I\u00CD\u00CC\u0130\u00CE\u00CF\u01CF\u012C\u012A\u0128\u012E\u1ECA\u0132\u0134\u0136\u0198\u0139\u013B\u0141\u013D\u013F\u02BCN\u0143N\u0308\u0147\u00D1\u0145\u014A\u00D3\u00D2\u00D4\u00D6\u01D1\u014E\u014C\u00D5\u0150\u1ECC\u00D8\u01FE\u01A0\u0152\u0125\u1E25\u0127\u0131\u00ED\u00ECi\u00EE\u00EF\u01D0\u012D\u012B\u0129\u012F\u1ECB\u0133\u0135\u0137\u0199\u0138\u013A\u013C\u0142\u013E\u0140\u0149\u0144n\u0308\u0148\u00F1\u0146\u014B\u00F3\u00F2\u00F4\u00F6\u01D2\u014F\u014D\u00F5\u0151\u1ECD\u00F8\u01FF\u01A1\u0153\u0154\u0158\u0156\u015A\u015C\u0160\u015E\u0218\u1E62\u1E9E\u0164\u0162\u1E6C\u0166\u00DE\u00DA\u00D9\u00DB\u00DC\u01D3\u016C\u016A\u0168\u0170\u016E\u0172\u1EE4\u01AF\u1E82\u1E80\u0174\u1E84\u01F7\u00DD\u1EF2\u0176\u0178\u0232\u1EF8\u01B3\u0179\u017B\u017D\u1E92\u0155\u0159\u0157\u017F\u015B\u015D\u0161\u015F\u0219\u1E63\u00DF\u0165\u0163\u1E6D\u0167\u00FE\u00FA\u00F9\u00FB\u00FC\u01D4\u016D\u016B\u0169\u0171\u016F\u0173\u1EE5\u01B0\u1E83\u1E81\u0175\u1E85\u01BF\u00FD\u1EF3\u0177\u00FF\u0233\u1EF9\u01B4\u017A\u017C\u017E\u1E93]+$/;
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+  var pswformat=  /^(?=.*\d)(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,16}$/;
+  var phoneformat=/^\d{11}$/;
+  var mail=document.myform.email.value;
+  var today = new Date();
+    var birthyear = new Date(dateString).getFullYear();
+	 var birthmonth = new Date(dateString).getMonth();
+  var phone=document.myform.phone.value;
+var current_year=today.getFullYear();
+        var current_month=today.getMonth();  
+var current_day=today.get
+if ((name==null || name=="")||(!name.match(letters))){  
+  alert("Name and surname fields should not be empty and contain only letters.");
+ 
+ 
 
+  return false;  
+}else if(((mail==null||mail==""))||(!mail.match(mailformat))){
+alert("You should write your e-mail with <id>@<domain> format");
+return false;}
+else if(((password==null||password==""))||(!password.match(pswformat))){  
+  alert("User password should be at least 8 and at most 16 characters long. Also, a password should contain at least one uppercase letter, one digit, and one special character");  
+return false;  
+  }
+else if((dateString==null||dateString==""||birthyear>current_year||birthyear<1920)||(birthyear=current_year&&birthmonth>current_month)){
+alert("Birth years should be between 1920 and today(in this month)") //birthyear=current_year&&birthmonth>current_year.getMonth()))
+return false;
+} 
+else if(((phone==null||phone==""))||(!phone.match(phoneformat))){
+alert("Telephone number field should not be empty and contain exactly 11 digits.");
+
+return false;}
+}  
+</script>  
 <nav class="navbar navbar-expand-sm navbar-inverse ">
 
   <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,66 +187,96 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-3 sidenav">
             <h2><p>Register to join us</h2></p>
- <img class="join" src="army.jpg" alt="pets" width="236" height="480">		
+ <img class="join" src="army.jpg" alt="pets" width="296" height="480">		
     </div>
-    <div class="col-sm-8 text-left"> 
-      <p class="head"><fieldset>
-<h2><p>REGİSTER FORM</h2></p>
-<form action="thanks.html">
-  <label for="fname">Name Surname:</label>
-  <input type="text" id="fname" name="fname"required ><br>
-  <label for="thePassword"> Password: </label>
-                        <input type="password" placeholder="min 4 lenght"  name="userpassword" required minlength="4"> <br>
-  <label for="mail">Mail:</label>
- <input type="email" id="mail "name="mail"required><br>
- <label for="theDate">Date of Birth:</label>
-                        <input type="date" id="theDate" placeholder="Please enter a date after 1910 year."name="date" min="1910-01-01" max="2020-03-01"required><br>
-  <label for="theNumber">PhoneNumber:</label>
-                        <input type="number" placeholder="Max lenght is 11"    id="theNumber" maxlength="11"  required  ><br>
-<label for="message">About Me:</label><br>
-  <textarea name="message"   style="width:150px; height:120px;"> </textarea><br>
-  <label for="files">Upload your photo:</label>
+    <div class="col-sm-7 text-left" > 
+      
+
+<form action="thanks.html" name="myform" onsubmit="return validateform()" method="post" style="max-width:500px;margin:auto " >
+  <h2>Register Form</h2>
+  <div class="input-container" >
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" id="name" type="text" placeholder="Name and Surname" name="name">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" id="mail" type="email" placeholder="Email" name="email">
+  </div>
   
-  <input type="file" id="files" name="files" required><br><label for="gender"><strong>Gender: </strong></label>
-  <input type="radio" id="male" name="gender" value="male">
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" id="password" type="password" placeholder="Password" name="psw">
+  </div>
+<div class="input-container">
+    <i class="fa fa-calendar icon"></i>
+    <input class="input-field" type="date" id="brtdate" placeholder="Birtdate" name="bdate">
+  </div><div class="input-container">
+    <i class="fa fa-phone icon"></i>
+    <input class="input-field" type="number" placeholder="PhoneNumber" name="phone">
+  </div>
+  <div class="input-container">
+    <i class="fa fa-comment-o icon"></i><label class="input-field" type="text" style="width:90px; height:20px;"  >About Me</label><textarea name="message" placeholder="About Me"  style="width:360px; height:60px;"> </textarea>
+   
+  </div>
+   <div class="input-container">
+    <i class="fa fa-file-image-o icon"></i><label class="input-field" type="text" >Upload Your Photo</label>
+    <input class="input-field" input type="file" id="files" name="files" placeholder="Upload your Photo">
+  </div>
+   <div class="input-container">
+   <i class="fa fa-mars icon"></i>
+    <i class="fa fa-venus icon"></i>
+  
+  <input class="input-field" type="radio" id="male" name="gender" value="male">
   <label for="male">Male</label>
-  <input type="radio" id="female" name="gender" value="female">
+  <input class="input-field"type="radio" id="female" name="gender" value="female">
   <label for="female">Female</label><br>
-  <label for="cars">Choose your Department:</label>
-  <select id="department" name="department">
+  </div>
+   <div class="input-container">
+    <i class="fa fa-hand-o-right icon"></i>
+    <label class="input-field" type="text" >Choose Your Department</label>
+	<select id="department" name="department">
     <option value="IE">Industrial Engineering</option>
     <option value="Ceng">Computer Engineering</option>
     <option value="chem">Chemical Engineering</option>
     <option value="cvl">Civil Engineering</option>
 	<option value="other">Other</option>
-  </select><br>
-  <label for="Mark your interest"><strong>Mark Your İnterest </strong></label><br>
-   <input type="checkbox" id="1" name="1" value="Music">
-  <label for="1"> Music</label>
-  <input type="checkbox" id="2" name="2" value="Politics">
-  <label for="2"> Politics</label>
-  <input type="checkbox" id="3" name="3" value="Science and Techonolgy">
-  <label for="3"> Science and Techonolgy</label>
-  <input type="checkbox" id="4" name="4" value="Tennis">
-  <label for="4"> Tennis</label>
-  <input type="checkbox" id="5" name="5" value="Books">
-  <label for="5"> Books</label><br>
-  <input type="checkbox" id="6" name="6" value="History">
-  <label for="6"> History</label>
-   <input type="checkbox" id="7" name="7" value="Gaming">
-  <label for="7"> Gaming</label>
-  <input type="checkbox" id="8" name="8" value="Tv Series">
-  <label for="8"> Tv Series</label>
-  <input type="checkbox" id="9" name="9" value="Basketball">
-  <label for="9"> Basketball</label>
-  <input type="checkbox" id="10" name="10" value="Fishing">
-  <label for="10"> Fishing</label>
-  <br><br>
-  <input type="submit" value="Send"> 
-  <input type="reset"></form>
-</fieldset>
+  </select></div>
+    <div class="input-container">
+    <i class="fa fa-check-square-o icon"></i><label class="input-field" type="text" >Mark You İnterest</label><div>
+  <label for="1"> Music</label> <input type="checkbox" id="1" name="1" value="Music">
+  
+  <label for="2"> Politics</label><input type="checkbox" id="2" name="2" value="Politics">
+  
+  <label for="3"> Science and Techonolgy</label><input type="checkbox" id="3" name="3" value="Science and Techonolgy">
+  
+  <label for="4"> Tennis</label><input type="checkbox" id="4" name="4" value="Tennis">
+  
+  <label for="5"> Books</label><input type="checkbox" id="5" name="5" value="Books">
+  
+  <label for="6"> History</label><input type="checkbox" id="6" name="6" value="History">
+   
+  <label for="7"> Gaming</label><input type="checkbox" id="7" name="7" value="Gaming">
+  
+  <label for="8"> Tv Series</label><input type="checkbox" id="8" name="8" value="Tv Series">
+ 
+  <label for="9"> Basketball</label> <input type="checkbox" id="9" name="9" value="Basketball">
+ 
+  <label for="10"> Fishing</label> <input type="checkbox" id="10" name="10" value="Fishing">
+  </div></div>
+  
+
+  <button type="submit" class="btn">Register</button><button type="reset" class="rst">Reset</button>
+</form>
+
+
+
+
+
+
+
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
